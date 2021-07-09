@@ -7,6 +7,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { QuestionComponent } from './question/question.component';
+import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

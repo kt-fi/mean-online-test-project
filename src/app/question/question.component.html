@@ -1,25 +1,27 @@
 <div class="row justify-content-md-center  pb-5">
-    <div class="col-md-7 questionContainer">
-        <form class="questionForm " action="">
-            <h3> QUESTION 1</h3>
-            <h6>question here?</h6>
+    <div *ngFor="let question of questions; let i = index " class="col-md-7 questionContainer">
+    
+        <form class="questionForm " action="" #questionRef="ngForm" >
+            <h3> QUESTION {{question.questionNumber}}</h3>
+            <h6>{{question.question}}</h6>
+
             <div>
                 <input class="form-check-input me-2" id="one" name="answer" type="radio" value="option1"> 
-                <label class="form-check-label" for="one">A. answer 1 </label>
+                <label class="form-check-label" for="one">A. {{question.option1}} </label>
             </div>
            <div class="mt-1">
                <input class="form-check-input me-2"  id="two" name="answer" type="radio" value="option2"> 
-            <label class="form-check-label" for="two">B. answer 2 </label>
+            <label class="form-check-label" for="two">B. {{question.option2}} </label>
            </div>
             <div class="mt-1">
                 <input class="form-check-input me-2" id="three" name="answer" type="radio" value="option3"> 
-            <label class="form-check-label" for="three">C. answer 3 </label>
+            <label class="form-check-label" for="three">C. {{question.option3}} </label>
             </div>
             <div class="mt-1">
                 <input class="form-check-input me-2" id="four" name="answer" type="radio" value="option4"> 
-                <label class="form-check-label" for="four">D. answer 4 </label>
+                <label class="form-check-label" for="four">D. {{question.option4}} </label>
             </div>
+           <p style="color: red;">You Must Select an Answer to continue!!</p>
             <input class="btn btn-primary mt-3" type="submit" value="Submit Answer" >
         </form>
-    </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InterviewService } from '../interview.service';
 
 @Component({
   selector: 'app-question',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
-  constructor() { }
+  questions:any;
+  constructor(public interviewService:InterviewService) { }
 
   ngOnInit(): void {
+    this.interviewService.getQuestions().subscribe(questions=>this.questions = questions); 
   }
+
+
 
 }

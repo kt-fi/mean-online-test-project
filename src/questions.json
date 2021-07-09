@@ -1,0 +1,221 @@
+{
+    "questions":[
+        {
+            "id": 1,
+            "questionNumber": 1,
+            "question": "What does JS stand for?",
+            "option1": "JiSm",
+            "option2": "javaScript",
+            "option3": "John Stones",
+            "option4": "JellyStone",
+            "correctOption": "option2",
+            "correct": false
+        },
+        {
+            "id": 2,
+            "questionNumber": 2,
+            "question": "What does TS stand for?",
+            "option1": "TotalScript",
+            "option2": "javaScript",
+            "option3": "TypeScript",
+            "option4": "TentScript",
+            "correctOption": "option3",
+            "correct": false
+        },
+        {
+            "id": 3,
+            "questionNumber": 3,
+            "question": "What does inheritance do in JavaScript?",
+            "option1": "Return a value",
+            "option2": "Store Data",
+            "option3": "Inherit a house from a family membet",
+            "option4": "Inherit a property from parent class",
+            "correctOption": "option4",
+            "correct": false
+         },
+        {
+            "id": 4,
+            "questionNumber": 4,
+            "question": "What is Angular?",
+            "option1": "A  Framework",
+            "option2": "A Library",
+            "option3": "TypeScript",
+            "option4": "C++",
+            "correctOption": "option1",
+            "correct": false
+         },
+        {
+            "id": 5,
+            "questionNumber": 5,
+            "question": "What is the HTML Element to insert javascript?",
+            "option1": "<HTML>",
+            "option2": "<script>",
+            "option3": "<js>",
+            "option4": "<ts>",
+            "correctOption": "option2",
+            "correct": false
+        },
+        {
+            "id": 6,
+            "questionNumber": 6,
+            "question": "What does HTML stand for?",
+            "option1": "Hyper Text Markup Language",
+            "option2": "Hyper TypeScript Marketing Line",
+            "option3": "Henry Top Makeup Line",
+            "option4": "Hopeful Type Made Loosly",
+            "correctOption": "option1",
+            "correct": false
+        },
+        {
+            "id": 7,
+            "questionNumber": 7,
+            "question": "Where is correct to place <script> tag in HTML?",
+            "option1": "<head>",
+            "option2": "<body>",
+            "option3": "<head> or <body>",
+            "option4": "<meta>",
+            "correctOption": "option3",
+            "correct": false
+        },
+        {
+            "id": 8,
+            "questionNumber": 8,
+            "question": "What is the extension for typescript files?",
+            "option1": ".js",
+            "option2": ".ts",
+            "option3": ".type",
+            "option4": ".script",
+            "correctOption": "option2",
+            "correct": false },
+        {
+            "id": 9,
+            "questionNumber": 9,
+            "question": "How do you create an alert box in JavaScript?",
+            "option1": "alert()",
+            "option2": "albert()",
+            "option3": "warning()",
+            "option4": "alertbox()",
+            "correctOption": "option1",
+            "correct": false },
+        {
+            "id": 10,
+            "questionNumber": 10,
+            "question": "What does 1 + 1 make?",
+            "option1": "JiSm",
+            "option2": "2",
+            "option3": "TypeScript",
+            "option4": "JellyStone",
+            "correctOption": "option2",
+            "correct": false
+        },
+        {
+            "id": 11,
+            "questionNumber": 11,
+            "question": "What is correct syntax for ES6 arrow function?",
+            "option1": "()=>{}",
+            "option2": "=>()",
+            "option3": "function(){}",
+            "option4": "{}()",
+            "correctOption": "option1",
+            "correct": false
+        },
+        {
+            "id": 12,
+            "questionNumber": 12,
+            "question": "What does !true mean?",
+            "option1": "true",
+            "option2": "undefined",
+            "option3": "null",
+            "option4": "false",
+            "correctOption": "option4",
+            "correct": false
+        },
+        {
+            "id": 13,
+            "questionNumber": 13,
+            "question": "which is the correct IF statement?",
+            "option1": "if{1==2}",
+            "option2": "if(i=1)then{}",
+            "option3": "if(i===1){}",
+            "option4": "none of the above",
+            "correctOption": "option3",
+            "correct": false
+        },
+        {
+            "id": 14,
+            "questionNumber": 14,
+            "question": "Which is not a valid variable type?",
+            "option1": "string",
+            "option2": "number",
+            "option3": "boolean",
+            "option4": "all above are valid",
+            "correctOption": "option4",
+            "correct": false
+         },
+        {
+            "id": 15,
+            "questionNumber": 15,
+            "question": "How do you mark a comment in JavaScript?",
+            "option1": "<!--Comment-->",
+            "option2": "//Commment",
+            "option3": "*comment*",
+            "option4": "/comment/",
+            "correctOption": "option2"
+        },
+        {
+            "id": 16,
+            "questionNumber": 16,
+            "question": "How do we create a click event in TypeScript?",
+            "option1": "(click)",
+            "option2": "(clickMe)",
+            "option3": "[click]",
+            "option4": "onClick",
+            "correctOption": "option1",
+            "correct": false
+        },
+        {
+            "id": 17,
+            "questionNumber": 17,
+            "question": "Which operator assigns values to variables?",
+            "option1": "*",
+            "option2": "/",
+            "option3": "=",
+            "option4": "==",
+            "correctOption": "option3",
+            "correct": false
+        },
+        {
+            "id": 18,
+            "questionNumber": 18,
+            "question": "Which HTML tag is used to connect external css files?",
+            "option1": "<css>",
+            "option2": "<script>",
+            "option3": "<link>",
+            "option4": "<styles>",
+            "correctOption": "option3",
+            "correct": false
+         },
+        {
+            "id": 19,
+            "questionNumber": 19,
+            "question": "What is the larges <H> tag in HTML?",
+            "option1": "H1",
+            "option2": "H2",
+            "option3": "H5",
+            "option4": "H6",
+            "correctOption": "option1",
+            "correct": false
+         },
+        {
+            "id": 20,
+            "questionNumber": 20,
+            "question": "What does 2 + 2 -1 make?",
+            "option1": "1",
+            "option2": "2",
+            "option3": "3",
+            "option4": "4",
+            "correctOption": "option3",
+            "correct": false
+        }
+    ]
+}
