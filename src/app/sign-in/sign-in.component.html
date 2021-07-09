@@ -1,16 +1,16 @@
 <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-6">
-       <form class="myForm">
-          <label for="username">User Name:</label>
-          <input class="form-control" type="text" name="username">
-          <div>
-            <p  style="color: red;">You Must Enter a Name</p>
-        </div>
-          <input type="submit" class="btn btn-success" value="Submit">
-      </form>   
-      </div>    
-  </div>
-  
-  
-  </div>
+  <div class="row justify-content-md-center">
+    <div *ngIf="!signedIn" class="col-md-6">
+     <form class="myForm" #userRef="ngForm" (ngSubmit)="signIn(userRef)">
+        <label for="username">User Name:</label>
+        <input class="form-control" type="text" name="username" required #usernameRef="ngModel" ngModel>
+        <div *ngIf="usernameRef.errors && (usernameRef.dirty || usernameRef.touched)">
+          <p [hidden]="!usernameRef.errors.required" style="color: red;">You Must Enter a Name</p>
+      </div>
+        <input [disabled]="userRef.invalid" type="submit" class="btn btn-success" value="Submit">
+    </form>   
+    </div>    
+</div>
+
+
+</div>

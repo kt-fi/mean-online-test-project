@@ -1,1 +1,5 @@
-<p>main works!</p>
+<div *ngIf="getUser != ''" class="row justify-content-md-center welcome-container">
+    <h2 class="col-md-6 p-4" style="text-align: center;">Welcome {{getUser}}</h2>
+ <app-question></app-question>   
+</div>
+

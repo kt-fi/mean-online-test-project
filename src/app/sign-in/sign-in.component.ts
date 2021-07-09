@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from '../user-service.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  signedIn: boolean = false
+  constructor(public userService: UserServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  signIn(userRef: NgForm): void {
+    let user = userRef.value.username
+    this.userService.setUsername(user)
+    this.signedIn = true;
   }
 
 }

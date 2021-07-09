@@ -2,23 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SignInComponent } from './sign-in/sign-in.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { FormsModule } from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { QuestionComponent } from './question/question.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignInComponent,
     HeaderComponent,
-    FooterComponent,
+    SignInComponent,
     MainComponent,
-    QuestionComponent
+    QuestionComponent,
+    FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
