@@ -1,27 +1,38 @@
 <div class="row justify-content-md-center  pb-5">
-    <div *ngFor="let question of questions; let i = index " class="col-md-7 questionContainer">
+    <div *ngFor="let question of questions; let i = index " class="col-md-7 questionContainer" [hidden]="questionNum != i">
     
-        <form class="questionForm " action="" #questionRef="ngForm" >
+        <form class="questionForm " action="" #questionRef="ngForm" (ngSubmit)="questionComplete(questionRef, i)" >
             <h3> QUESTION {{question.questionNumber}}</h3>
             <h6>{{question.question}}</h6>
 
             <div>
-                <input class="form-check-input me-2" id="one" name="answer" type="radio" value="option1"> 
+                <input class="form-check-input me-2" id="one" name="answer" type="radio" value="option1" (change)="selectedAnswer()" #ansOne ngModel> 
                 <label class="form-check-label" for="one">A. {{question.option1}} </label>
             </div>
            <div class="mt-1">
-               <input class="form-check-input me-2"  id="two" name="answer" type="radio" value="option2"> 
+               <input class="form-check-input me-2"  id="two" name="answer" type="radio" value="option2" (change)="selectedAnswer()" #ansTwo ngModel> 
             <label class="form-check-label" for="two">B. {{question.option2}} </label>
            </div>
             <div class="mt-1">
-                <input class="form-check-input me-2" id="three" name="answer" type="radio" value="option3"> 
+                <input class="form-check-input me-2" id="three" name="answer" type="radio" value="option3" (change)="selectedAnswer()" #ansThree ngModel> 
             <label class="form-check-label" for="three">C. {{question.option3}} </label>
             </div>
             <div class="mt-1">
-                <input class="form-check-input me-2" id="four" name="answer" type="radio" value="option4"> 
+                <input class="form-check-input me-2" id="four" name="answer" type="radio" value="option4" (change)="selectedAnswer()" #ansFour ngModel> 
                 <label class="form-check-label" for="four">D. {{question.option4}} </label>
             </div>
-           <p style="color: red;">You Must Select an Answer to continue!!</p>
+            
+           <p *ngIf="showAnswerValidation" style="color: red;">You Must Select an Answer to continue!!</p>
             <input class="btn btn-primary mt-3" type="submit" value="Submit Answer" >
+            <input *ngIf="i != 0" class="btn btn-danger mt-3" type="button" value="Last Question" (click)="lastQuestion()">
         </form>
+        
+       
+    </div>
+    <div class="result m-5" *ngIf="showTotal">
+        <p>You Scored: {{percentage}}%</p>
+        <p *ngIf="pass" style="color: rgb(18, 212, 18);">Congratulations {{username}} You have passed the Test</p>
+        <p *ngIf="!pass" style="color: red;">Sorry You Failed!! please try again another time</p>
+        </div>
+
 </div>
