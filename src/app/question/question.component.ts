@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InterviewService } from '../interview.service';
+import { Question } from '../question.model';
 import { UserServiceService } from '../user-service.service';
 
 @Component({
@@ -9,9 +10,25 @@ import { UserServiceService } from '../user-service.service';
 })
 export class QuestionComponent implements OnInit {
 
+
+  // Questions to load if problem with questions.json
+  
+  q1:Question = new Question( 1, 1, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q2:Question = new Question( 2, 2, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q3:Question = new Question( 3, 3, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q4:Question = new Question( 4, 4, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q5:Question = new Question( 5, 5, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q6:Question = new Question( 6, 6, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q7:Question = new Question( 7, 7, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q8:Question = new Question( 8, 8, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q9:Question = new Question( 9, 9, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+  q10:Question = new Question( 10, 10, "What is the HTML Element to insert javascript?", "<HTML>", "<script>","<js>","<ts>","option2", false)
+
+  backupQuestions:any[] = [this.q1, this.q2, this.q3, this.q4, this.q5, this.q6, this.q7, this.q8, this.q9, this.q10]
+
   constructor(public interviewService:InterviewService, public userService:UserServiceService) { }
 
-  questions:any;
+  questions:any = this.backupQuestions;
   questionNum:number = 0;
   points:number = 0;
   percentage:number = 0;
@@ -20,8 +37,17 @@ export class QuestionComponent implements OnInit {
   quizComplete:boolean = false;
   pass?:boolean;
 
+
+  
+
   ngOnInit(): void {
    this.interviewService.getQuestions().subscribe(questions=>this.questions = questions); 
+
+   if(!this.questions.length){
+    this.questions = this.backupQuestions
+   }
+  
+   
   }
 
   get username():any{
