@@ -1,5 +1,5 @@
 <div class="row justify-content-md-center  pb-5">
-    <div *ngFor="let question of questions; let i = index " class="col-md-7 questionContainer" [hidden]="questionNum != i">
+    <div *ngFor="let question of questions; let i = index " class="col-md-4 questionContainer" [hidden]="questionNum != i">
     
         <form class="questionForm " action="" #questionRef="ngForm" (ngSubmit)="questionComplete(questionRef, i)" >
             <h3> QUESTION {{question.questionNumber}}</h3>
