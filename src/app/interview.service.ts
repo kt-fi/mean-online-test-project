@@ -10,6 +10,8 @@ export class InterviewService {
 
   constructor(public http:HttpClient) { }
 
+//Requires questions.json to be served by json-server
+
   getQuestions():Observable<Question[]>{
   return this.http.get<Question[]>("http://localhost:3000/questions"); 
   }
