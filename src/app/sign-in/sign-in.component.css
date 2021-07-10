@@ -1,0 +1,9 @@
+.myForm{
+    padding: 50px;
+    text-align: center;
+    min-height: 45vh;
+}
+
+input{
+    margin: 10px;
+}
