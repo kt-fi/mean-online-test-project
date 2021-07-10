@@ -21,6 +21,7 @@ export class QuestionComponent implements OnInit {
   pass?:boolean;
 
   ngOnInit(): void {
+    
    this.interviewService.getQuestions().subscribe(questions=>this.questions = questions); 
   }
 
@@ -90,5 +91,4 @@ export class QuestionComponent implements OnInit {
   selectedAnswer():void{
     this.showAnswerValidation = false;
   }
-
 }
