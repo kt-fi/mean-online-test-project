@@ -1,6 +1,8 @@
 <div class="row justify-content-md-center  pb-5">
-    <div *ngFor="let question of questions; let i = index " class="col-md-4 questionContainer" [hidden]="questionNum != i">
+
+    <!-- LOOP QUESTIIONS SHOWING ONLY ONE AT A TIME-->
     
+    <div *ngFor="let question of questions; let i = index " class="col-md-4 questionContainer" [hidden]="questionNum != i">
         <form class="questionForm " action="" #questionRef="ngForm" (ngSubmit)="questionComplete(questionRef, i)" >
             <h3> QUESTION {{question.questionNumber}}</h3>
             <h6>{{question.question}}</h6>
@@ -22,13 +24,18 @@
                 <label class="form-check-label" for="four">D. {{question.option4}} </label>
             </div>
             
+            <!--VALIDATE THAT AN ANSWER HAS BEEN GIVEN -->
            <p *ngIf="showAnswerValidation" style="color: red;">You Must Select an Answer to continue!!</p>
+
+           <!-- SUBMIT BUTTON and RETURN TO LAST QUESTION BUTTON-->
             <input class="btn btn-primary mt-3" type="submit" value="Submit Answer" >
             <input *ngIf="i != 0" class="btn btn-danger mt-3" type="button" value="Last Question" (click)="lastQuestion()">
         </form>
         
        
     </div>
+
+    <!-- RESULTS TO SHOW AFTER LAST QUESTION ANSWERED -->
     <div class="result m-5" *ngIf="showTotal">
         <p>You Scored: {{percentage}}%</p>
         <p *ngIf="pass" style="color: rgb(18, 212, 18);">Congratulations {{username}} You have passed the Test</p>

@@ -21,7 +21,6 @@ export class QuestionComponent implements OnInit {
   pass?:boolean;
 
   ngOnInit(): void {
-    
    this.interviewService.getQuestions().subscribe(questions=>this.questions = questions); 
   }
 
@@ -74,7 +73,7 @@ export class QuestionComponent implements OnInit {
     if (this.questionNum >= this.questions.length) {
       this.showTotal = true;
 
-      if (this.percentage > 60) {
+      if (this.percentage > 75) {
         this.pass = true;
       } else {
         this.pass = false;
