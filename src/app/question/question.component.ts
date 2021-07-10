@@ -73,7 +73,7 @@ export class QuestionComponent implements OnInit {
     if (this.questionNum >= this.questions.length) {
       this.showTotal = true;
 
-      if (this.percentage > 60) {
+      if (this.percentage > 75) {
         this.pass = true;
       } else {
         this.pass = false;
@@ -90,5 +90,4 @@ export class QuestionComponent implements OnInit {
   selectedAnswer():void{
     this.showAnswerValidation = false;
   }
-
 }
