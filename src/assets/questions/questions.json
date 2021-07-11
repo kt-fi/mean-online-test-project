@@ -3,8 +3,8 @@
         {
             "id": 1,
             "questionNumber": 1,
-            "question": "What does JS stand for?",
-            "option1": "JiSm",
+            "question": "What type of file is .js?",
+            "option1": "JiSam",
             "option2": "javaScript",
             "option3": "John Stones",
             "option4": "JellyStone",
@@ -14,7 +14,7 @@
         {
             "id": 2,
             "questionNumber": 2,
-            "question": "What does TS stand for?",
+            "question": "What type of file is a .ts?",
             "option1": "TotalScript",
             "option2": "javaScript",
             "option3": "TypeScript",
@@ -100,11 +100,11 @@
         {
             "id": 10,
             "questionNumber": 10,
-            "question": "What does 1 + 1 make?",
-            "option1": "JiSm",
-            "option2": "2",
-            "option3": "TypeScript",
-            "option4": "JellyStone",
+            "question": "What does console.log('Hello World') do?",
+            "option1": "create an alert box with 'Hello World'",
+            "option2": "crash",
+            "option3": "reset form",
+            "option4": "log 'Hello World' to the console",
             "correctOption": "option2",
             "correct": false
         },
