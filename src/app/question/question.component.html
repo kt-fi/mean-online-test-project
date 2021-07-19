@@ -1,8 +1,8 @@
 <div class="row justify-content-md-center  pb-5">
 
     <!-- LOOP QUESTIIONS SHOWING ONLY ONE AT A TIME-->
-    
-    <div *ngFor="let question of questions; let i = index " class="col-md-4 questionContainer" [hidden]="questionNum != i">
+  
+        <div *ngFor="let question of questions; let i = index " class="col-md-4 questionContainer" [hidden]="questionNum != i">
         <form class="questionForm " action="" #questionRef="ngForm" (ngSubmit)="questionComplete(questionRef, i)" >
             <h3> QUESTION {{question.questionNumber}}</h3>
             <h6>{{question.question}}</h6>
@@ -34,12 +34,13 @@
         
        
     </div>
-
+ <div class="col-md-12">
     <!-- RESULTS TO SHOW AFTER LAST QUESTION ANSWERED -->
-    <div class="result m-5" *ngIf="showTotal">
+    <div class="result m-5 col-md-12" *ngIf="showTotal">
         <p>You Scored: {{percentage}}%</p>
-        <p *ngIf="pass" style="color: rgb(18, 212, 18);">Congratulations {{username}} You have passed the Test</p>
-        <p *ngIf="!pass" style="color: red;">Sorry You Failed!! please try again another time</p>
+        <p class="col-md-12" [ngStyle]="pass ? {'color': 'green'} : {'color': 'red'}">{{passMessage}}</p>
         </div>
+   </div> 
+   
 
 </div>

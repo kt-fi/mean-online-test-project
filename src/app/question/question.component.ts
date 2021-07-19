@@ -28,6 +28,7 @@ export class QuestionComponent implements OnInit {
 
   constructor(public interviewService:InterviewService, public userService:UserServiceService) { }
 
+  passMessage:string = ""
   questions:any = this.backupQuestions;
   questionNum:number = 0;
   points:number = 0;
@@ -98,11 +99,12 @@ export class QuestionComponent implements OnInit {
   private showGrade() {
     if (this.questionNum >= this.questions.length) {
       this.showTotal = true;
-
       if (this.percentage > 75) {
         this.pass = true;
+        this.passMessage = `Congratulations ${this.username} You have Passed the Test`
       } else {
         this.pass = false;
+        this.passMessage = `Sorry ${this.username} You have Failed the Test`
       }
     }
   }

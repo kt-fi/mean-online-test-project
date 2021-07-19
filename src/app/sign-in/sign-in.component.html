@@ -1,9 +1,9 @@
-<div class="container">
+<div class="">
   <div class="row justify-content-md-center">
-    <div *ngIf="!signedIn" class="col-md-6">
+    <div *ngIf="!signedIn" class="col-md-6 col-sm-11">
      <form class="myForm" #userRef="ngForm" (ngSubmit)="signIn(userRef)">
         <label for="username">User Name:</label>
-        <input class="form-control" type="text" name="username" required #usernameRef="ngModel" ngModel>
+        <input class="form-control col-12" type="text" name="username" required #usernameRef="ngModel" ngModel>
         <div *ngIf="usernameRef.errors && (usernameRef.dirty || usernameRef.touched)">
           <p [hidden]="!usernameRef.errors.required" style="color: red;">You Must Enter a Name</p>
       </div>

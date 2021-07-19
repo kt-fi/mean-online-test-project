@@ -4,10 +4,16 @@
     background-size: cover;
     height: 45vh;
     color: white;
-    
+    overflow: hidden;
 }
 
 h1{
     font-size: 70px;
-    padding: 5rem;
+    padding: 0 5rem;
+}
+
+@media (min-width:450px){
+    h1{
+        padding: 5rem;
+    }
 }
